@@ -7,7 +7,7 @@ cache:
     - node_modules
 install: yarn
 script:
-  - npm i && npm export
+  - yarn install && yarn export
 deploy:
   provider: firebase
   token:
