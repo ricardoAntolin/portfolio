@@ -27,34 +27,34 @@ export default class PortfolioDataService {
 
   public static readonly experienceList: IInfoCard[] = [
     {
-      logo: "employer-logo.svg",
+      logo: "square1.png",
       headings: {
-        primary: "Employer Name",
-        secondary: "Job Title",
-        tertiary: "September 2017 - Present"
+        primary: "Square1 Software",
+        secondary: "Mobile software engineer",
+        tertiary: "September 2018 - Present"
       },
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat."
+        "Mobile engineer on agency, design company architecture of Android and iOS, develop mobile native apps on several projects"
+    },
+    {
+      logo: "wunder.png",
+      headings: {
+        primary: "Wunder",
+        secondary: "Lead Mobile engineer",
+        tertiary: "February 2018 - Present"
+      },
+      description:
+        "Leading the creation from scratch of an awesome mobile app"
     },
     {
       logo: "employer-logo.svg",
       headings: {
-        primary: "Employer Name",
-        secondary: "Job Title",
-        tertiary: "February 2017 - September 2017"
+        primary: "Freelance",
+        secondary: "Mobile senior engineer",
+        tertiary: "June 2012 - Present"
       },
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat."
-    },
-    {
-      logo: "employer-logo.svg",
-      headings: {
-        primary: "Employer Name",
-        secondary: "Job Title",
-        tertiary: "January 2016 - February 2017"
-      },
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.",
+        "Creating and maintaining native apps on both platforms",
       isLast: true
     }
   ];
@@ -97,7 +97,9 @@ export default class PortfolioDataService {
       tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
       url: {
         github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio"
+        website: "https://www.harveydelaney.com/seng-portfolio",
+        itunes: "",
+        playStore: ""
       },
       releaseDate: "13th Oct 2018"
     },
@@ -114,7 +116,9 @@ export default class PortfolioDataService {
       tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
       url: {
         github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio"
+        website: "https://www.harveydelaney.com/seng-portfolio",
+        itunes: "",
+        playStore: ""
       },
       releaseDate: "13th Oct 2018"
     },
@@ -131,7 +135,9 @@ export default class PortfolioDataService {
       tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
       url: {
         github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio"
+        website: "https://www.harveydelaney.com/seng-portfolio",
+        itunes: "",
+        playStore: ""
       },
       releaseDate: "13th Oct 2018"
     },
@@ -148,7 +154,9 @@ export default class PortfolioDataService {
       tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
       url: {
         github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio"
+        website: "https://www.harveydelaney.com/seng-portfolio",
+        itunes: "",
+        playStore: ""
       },
       releaseDate: "13th Oct 2018"
     }
@@ -162,26 +170,14 @@ export default class PortfolioDataService {
     {
       id: "ln",
       name: "LinkedIn",
-      url: "https://www.linkedin.com/",
+      url: "https://www.linkedin.com/in/ricardo-antolin-serrano/",
       icon: "fa-linkedin"
     },
     {
       id: "gh",
       name: "GitHub",
-      url: "https://github.com/",
+      url: "https://github.com/ricardoAntolin",
       icon: "fa-github"
-    },
-    {
-      id: "so",
-      name: "Stack Overflow",
-      url: "https://stackoverflow.com/",
-      icon: "fa-stack-overflow"
-    },
-    {
-      id: "fb",
-      name: "Facebook",
-      url: "https://www.facebook.com/",
-      icon: "fa-facebook"
     }
   ];
 }

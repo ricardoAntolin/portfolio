@@ -11,6 +11,8 @@ interface IProps {
 export interface IUrl {
   github?: string;
   website?: string;
+  itunes?: string;
+  playStore?: string;
 }
 
 export interface IProject {

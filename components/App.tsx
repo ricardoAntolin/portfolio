@@ -4,7 +4,6 @@ import "./App.scss";
 import Landing from "./sections/landing/landing";
 import About from "./sections/about/about";
 import Experience from "./sections/experience/experience";
-import Education from "./sections/education/education";
 import Projects from "./sections/projects/projects";
 import Skills from "./sections/skills/skills";
 import Contact from "./sections/contact/contact";
@@ -16,10 +15,9 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <Landing userDetails={PortfolioDataService.userDetails} />
-        <About aboutTextList={PortfolioDataService.aboutTextList} />
-        <Experience experienceList={PortfolioDataService.experienceList} />
-        <Education educationList={PortfolioDataService.educationList} />
+        <About aboutTextList={PortfolioDataService.aboutTextList} userDetails={PortfolioDataService.userDetails}/>
         <Projects projectList={PortfolioDataService.projectList} />
+        <Experience experienceList={PortfolioDataService.experienceList} />
         <Skills skillList={PortfolioDataService.skillList} />
         <Contact socialIconList={PortfolioDataService.socialIconList} />
         <Footer />
