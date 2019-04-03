@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "node"
+cache: 
+  yarn: true
+  directories:
+    - node_modules
+install: yarn
+script:
+  - npm i && npm export
+deploy:
+  provider: firebase
+  token:
+    secure: "RdfpE17sCIPwju/pl4qGKIG6UOxSZq+PaQNTYw2MjLiua08E9n9YlRtLkDKVRkHSDEwqM78KFmas78grtVJ0bgi2+Hn/bzQB671F3z5J9RboZ0yPb2WJUTioLVPQ1dvC5T6fj6opO6d6s/4Xxl+jRhvOq4zEAMXAcXz2PDFyqoF0vmIYK9qeLeZvUKnpjn63IW5P2X1hf7zRG1MYN4/12a9pojxcitjLcCO1QQ3f1rjkke37vKSZdwfvIsizzjkpegud3cIgh6vIqN14ws02V/qBYXzgrzIGUzHjq+5nLDQJJuVSy3fuTPyAAUw5xGbamnwmy162p00+AjoR9Xq4PPHMgA8y74ftZbRvurzG7H6ocVmfIjjCRd0UcxFIOk58ml7MfvR1G1D2d37lv51zXREotwtBtynQlof0MfmPCBgHLhE5YZv6pN/QQjOB0mnB2Buo+gclGsbt70Z81f+0sLOjqq3FJ9yslK1o/jrn/41tUMOSiEQddvwmsdO5ZZLpfNlk1bzzVgLmZzypOjs+A7f+MTNH3evpNETJz7gPnz3UMuufphjp9Xm4MMC8t/2leYvu+QSsn02bhUEdTWketQS15QCXJx5rv/C+cWqbPXPVM/bWcZAUbOdVoep74iMV5JvTxa/XUWVbmN6hsLAdkEhRatQiHIyNWhs9i4W+sm8="
+  project: "prod"
+  on:
+    branch: master
