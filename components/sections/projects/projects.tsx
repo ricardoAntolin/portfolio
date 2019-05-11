@@ -35,7 +35,7 @@ class Projects extends React.Component<IProps, IState> {
 
     return (
       <section className="section section-secondary">
-        <h2>Projects</h2>
+        <h2>Some of projects i have worked on</h2>
 
         <div className="projects-container">
           {projectList.map(project => (
