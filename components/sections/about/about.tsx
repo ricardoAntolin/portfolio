@@ -23,7 +23,7 @@ export interface IUserDetails {
 
 const About: React.StatelessComponent<IProps> = ({aboutTextList, userDetails}) => {
   return (
-    <section className="section section-primary section-about">
+    <section className="section section-primary section-about" id="about">
       <h2>About {userDetails.firstName}</h2>
       <div className="content-container about-container">
         <img className="portrait" src='/static/images/profile-picture.jpg' />

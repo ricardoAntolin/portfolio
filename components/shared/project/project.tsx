@@ -40,14 +40,8 @@ const Project: React.StatelessComponent<IProps> = props => {
   } = props;
 
   return (
-    <div
-      onClick={() => projectClick(id)}
-      className="project-container"
-    >
+    <div onClick={() => projectClick(id)} className="project-container">
       <div className="heading">
-        <div className="fa fa-circle red" />
-        <div className="fa fa-circle yellow" />
-        <div className="fa fa-circle green" />
         <span>{name}</span>
       </div>
       <div className="body">
@@ -55,10 +49,7 @@ const Project: React.StatelessComponent<IProps> = props => {
           <div className="description-container">{overview}</div>
         </div>
 
-        <img
-          className="project-image"
-          src={`/static/images/projects/${img}`}
-        />
+        <img className="project-image" src={`/static/images/projects/${img}`} />
       </div>
     </div>
   );

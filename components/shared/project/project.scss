@@ -7,25 +7,11 @@
   box-shadow: $content-shadow;
 
   .heading {
-    font-size: 1rem;
-    background-color: #ddd;
+    font-size: 2rem;
+    background-color: rgba(221, 221, 221, 0.38);
     padding: 0.25rem 0 0.25rem 0.25rem;
-
-    .fa-circle {
-      padding-right: 0.5rem;
-
-      &.red {
-        color: red;
-      }
-
-      &.yellow {
-        color: yellow;
-      }
-
-      &.green {
-        color: green;
-      }
-    }
+    color: $theme-dark;
+    text-align: center
   }
 
   .body {

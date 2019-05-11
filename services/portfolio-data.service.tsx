@@ -13,29 +13,13 @@ export default class PortfolioDataService {
   };
 
   public static readonly aboutTextList: string[] = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna.",
-    `Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus.
-		Fusce eget efficitur libero. 
-		Morbi dapibus porta quam laoreet placerat. 
-		Donec eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. 
-		Quisque et tincidunt libero. Donec id pharetra justo.`,
-    `Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. 
-		Vivamus nunc justo, finibus ut nisl sed, euismod rhoncus nulla. 
-		Proin sed magna egestas, egestas ante et, congue eros. 
-		In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.`
+    "Passionate Mobile software engineer.",
+    `I have solid background on mobile software development in both platforms (iOS and Android), 
+    loved with scrum, best on product development environment, 
+    experienced on startups and big projects`
   ];
 
   public static readonly experienceList: IInfoCard[] = [
-    {
-      logo: "square1.png",
-      headings: {
-        primary: "Square1 Software",
-        secondary: "Mobile software engineer",
-        tertiary: "September 2018 - Present"
-      },
-      description:
-        "Mobile engineer on agency, design company architecture of Android and iOS, develop mobile native apps on several projects"
-    },
     {
       logo: "wunder.png",
       headings: {
@@ -47,15 +31,45 @@ export default class PortfolioDataService {
         "Leading the creation from scratch of an awesome mobile app"
     },
     {
+      logo: "square1.png",
+      headings: {
+        primary: "Square1 Software",
+        secondary: "Mobile software engineer",
+        tertiary: "September 2018 - Present"
+      },
+      description:
+        "Mobile engineer on agency, design company architecture of Android and iOS, develop mobile native apps on several projects"
+    },
+    {
       logo: "employer-logo.svg",
       headings: {
         primary: "Freelance",
-        secondary: "Mobile senior engineer",
+        secondary: "Mobile software engineer",
         tertiary: "June 2012 - Present"
       },
       description:
-        "Creating and maintaining native apps on both platforms",
-      isLast: true
+        "Creating and maintaining native apps on both platforms"
+    },
+    {
+      logo: "lynx-view.png",
+      headings: {
+        primary: "LynxView",
+        secondary: "Mobile software engineer",
+        tertiary: "March 2017 - Present"
+      },
+      description:
+        "Mobile engineer on agency, from march 2017 to September 2018 creating medical transportation app, then collaborating in some projects"
+    },
+    {
+      logo: "everis.png",
+      headings: {
+        primary: "everis",
+        secondary: "Mobile software engineer",
+        tertiary: "August 2015 - March 2017"
+      },
+      description:
+        "Leading Mobile engineering on agency working on bank mobile and web apps",
+        isLast: true
     }
   ];
 
@@ -86,79 +100,79 @@ export default class PortfolioDataService {
   public static readonly projectList: IProject[] = [
     {
       id: 0,
-      name: "Project Name",
+      name: "Wunder",
       description: {
         overview:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.",
+          "Comunity app to help to make best version of people",
         detailed:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "Comunity app to help to make best version of people"
       },
-      img: "portfolio.jpg",
-      tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
+      img: "wunder.jpg",
+      tagList: [SkillEnum.ios, SkillEnum.swift, SkillEnum.node],
       url: {
-        github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio",
+        github: "",
+        website: "https://www.getwunder.com",
         itunes: "",
         playStore: ""
       },
-      releaseDate: "13th Oct 2018"
+      releaseDate: "In progress"
     },
     {
       id: 1,
-      name: "Project Name",
+      name: "Nike Storebook",
       description: {
         overview:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.",
+          "Private app for Nike stores staff",
         detailed:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "Private app for Nike stores staff"
       },
-      img: "portfolio.jpg",
-      tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
+      img: "nike.jpg",
+      tagList: [SkillEnum.ios, SkillEnum.objectivec, SkillEnum.swift],
       url: {
-        github: "https://github.com/HarveyD/seng-portfolio",
+        github: "",
         website: "https://www.harveydelaney.com/seng-portfolio",
         itunes: "",
         playStore: ""
       },
-      releaseDate: "13th Oct 2018"
+      releaseDate: "2016"
     },
     {
       id: 2,
-      name: "Project Name",
+      name: "SETS driver for ASV",
       description: {
         overview:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.",
+          "App for ambulance driver, to manage routes of non urgent medical tansportation",
         detailed:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "App for ambulance driver, to manage routes of non urgent medical tansportation"
       },
-      img: "portfolio.jpg",
-      tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
+      img: "asv.jpg",
+      tagList: [SkillEnum.android, SkillEnum.kotlin, SkillEnum.java, SkillEnum.mongodb],
       url: {
-        github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio",
+        github: "",
+        website: "https://www.tsayuda.com",
         itunes: "",
         playStore: ""
       },
-      releaseDate: "13th Oct 2018"
+      releaseDate: "2018"
     },
     {
       id: 3,
-      name: "Project Name",
+      name: "Riide",
       description: {
         overview:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex.",
+          "White labeled app for taxis",
         detailed:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "White labeled app for taxis"
       },
-      img: "portfolio.jpg",
-      tagList: [SkillEnum.ts, SkillEnum.react, SkillEnum.html5, SkillEnum.css3],
+      img: "riide.jpg",
+      tagList: [SkillEnum.ios, SkillEnum.android, SkillEnum.swift, SkillEnum.kotlin],
       url: {
-        github: "https://github.com/HarveyD/seng-portfolio",
-        website: "https://www.harveydelaney.com/seng-portfolio",
-        itunes: "",
-        playStore: ""
+        github: "",
+        website: "https://riide.co/",
+        itunes: "https://itunes.apple.com/us/app/riide/id1131008247",
+        playStore: "https://play.google.com/store/apps/details?id=uk.riide"
       },
-      releaseDate: "13th Oct 2018"
+      releaseDate: "2019"
     }
   ];
 

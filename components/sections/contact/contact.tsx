@@ -9,7 +9,7 @@ interface IProps {
 
 const Contact: React.StatelessComponent<IProps> = ({socialIconList}) => {
   return (
-    <section className="section section-theme">
+    <section className="section section-theme" id="contact">
       <h2>Contact</h2>
 
       <div className="contact-container">
@@ -21,7 +21,7 @@ const Contact: React.StatelessComponent<IProps> = ({socialIconList}) => {
 
         <div className="form-container">
           <h2>Send me a message</h2>
-          <form method="POST" className="form" action="https://formspree.io/harvey@harveydelaney.com">
+          <form method="POST" className="form" action="https://formspree.io/hello@ricardoantolin.dev">
             <input type="hidden" name="_subject" value="Contact request from personal website"/>
             <input type="email" name="_replyto" placeholder="Your email" /> 
             <textarea name="message" placeholder="Your message" />

@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import "./landing.scss";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 interface IAnimated {
   currentClass: string;
@@ -12,6 +13,7 @@ interface IState {
   name?: IAnimated;
   title?: IAnimated;
   findOutMore?: IAnimated;
+  hireMeButton?: IAnimated;
 }
 
 interface IProps {
@@ -31,7 +33,16 @@ class Landing extends React.Component<IProps, IState> {
     this.state = {
       name: { currentClass: "hide-down", animationClass: "show", delay: 150 },
       title: { currentClass: "hide-down", animationClass: "show", delay: 450 },
-      findOutMore: { currentClass: "hide-down", animationClass: "show", delay: 600 }
+      findOutMore: {
+        currentClass: "hide-down",
+        animationClass: "show",
+        delay: 650
+      },
+      hireMeButton: {
+        currentClass: "hide-down",
+        animationClass: "show",
+        delay: 600
+      }
     };
   }
 
@@ -45,28 +56,48 @@ class Landing extends React.Component<IProps, IState> {
 
   public render() {
     const { userDetails } = this.props;
-    const  { name, title, findOutMore } = this.state;
+    const { name, title, findOutMore, hireMeButton } = this.state;
 
     return (
       <section className="landing-container">
         <div className="landing-overlay" />
 
         <div className="container container-heading">
-          <h1
-            className={`heading-name ${name && name.currentClass}`}
-          >
+          <h1 className={`heading-name ${name && name.currentClass}`}>
             {userDetails.firstName} {userDetails.lastName}
           </h1>
-          <h2
-            className={`heading-title ${title && title.currentClass}`}
-          >
+          <h2 className={`heading-title ${title && title.currentClass}`}>
             {userDetails.title}
           </h2>
         </div>
 
-        <div className={`container container-footer ${findOutMore && findOutMore.currentClass}`}>
-          <span className="find-out">Find out more about {userDetails.firstName}</span>
-          <i className="fa fa-chevron-down" />
+        <div className="container hire-me-container">
+          <Link
+            href="#"
+            to="contact"
+            className={`hire-me-button ${hireMeButton &&
+              hireMeButton.currentClass}`}
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            HIRE ME!
+          </Link>
+        </div>
+
+        <div
+          className={`container container-footer ${findOutMore &&
+            findOutMore.currentClass}`}
+        >
+          <span className="find-out">
+            Find out more about {userDetails.firstName}
+          </span>
+          <Link className="fa fa-chevron-down"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+            />
         </div>
       </section>
     );
