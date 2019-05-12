@@ -9,13 +9,17 @@ import Skills from "./sections/skills/skills";
 import Contact from "./sections/contact/contact";
 import Footer from "./sections/footer/footer";
 import PortfolioDataService from "../services/portfolio-data.service";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-139875082-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends React.Component {
   public render() {
     return (
       <div className="app-container">
         <Landing userDetails={PortfolioDataService.userDetails} />
-        <About aboutTextList={PortfolioDataService.aboutTextList} userDetails={PortfolioDataService.userDetails}/>
+        <About aboutTextList={PortfolioDataService.aboutTextList} userDetails={PortfolioDataService.userDetails} />
         <Projects projectList={PortfolioDataService.projectList} />
         <Experience experienceList={PortfolioDataService.experienceList} />
         <Skills skillList={PortfolioDataService.skillList} />

@@ -35,6 +35,22 @@ const renderButtons = (url: IUrl) => (
         <i className="fa fa-link" />
       </a>
     )}
+    {url.itunes && (
+      <a href={url.github}
+        className="link-button button-website"
+      >
+        Appstore
+        <i className="fab fa-apple" />
+      </a>
+    )}
+    {url.playStore && (
+      <a href={url.github}
+        className="link-button button-website"
+      >
+        Play Store
+        <i className="fab fa-android" />
+      </a>
+    )}
   </div>
 );
 
