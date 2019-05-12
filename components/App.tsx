@@ -12,9 +12,10 @@ import PortfolioDataService from "../services/portfolio-data.service";
 import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-139875082-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.pageview("/#");
 
 class App extends React.Component {
+
   public render() {
     return (
       <div className="app-container">
