@@ -36,7 +36,7 @@ const renderButtons = (url: IUrl) => (
       </a>
     )}
     {url.itunes && (
-      <a href={url.github}
+      <a href={url.itunes}
         className="link-button button-website"
       >
         Appstore
@@ -44,7 +44,7 @@ const renderButtons = (url: IUrl) => (
       </a>
     )}
     {url.playStore && (
-      <a href={url.github}
+      <a href={url.playStore}
         className="link-button button-website"
       >
         Play Store

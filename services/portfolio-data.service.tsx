@@ -28,14 +28,24 @@ export default class PortfolioDataService {
         tertiary: "February 2018 - Present"
       },
       description:
-        "Leading the creation from scratch of an awesome mobile app"
+        "Leading the creation of an awesome mobile app, that wants to make best version of its users"
+    },
+    {
+      logo: "cabify.png",
+      headings: {
+        primary: "Cabify",
+        secondary: "Mobile software engineer",
+        tertiary: "July 2019 - Present"
+      },
+      description:
+        "Mobile engineer at MaaS spanish company, helping to assure best possible experiencience for users"
     },
     {
       logo: "square1.png",
       headings: {
         primary: "Square1 Software",
         secondary: "Mobile software engineer",
-        tertiary: "September 2018 - Present"
+        tertiary: "September 2018 - July 2019"
       },
       description:
         "Mobile engineer on agency, design company architecture of Android and iOS, develop mobile native apps on several projects"
@@ -130,7 +140,7 @@ export default class PortfolioDataService {
       tagList: [SkillEnum.ios, SkillEnum.objectivec, SkillEnum.swift],
       url: {
         github: "",
-        website: "https://www.harveydelaney.com/seng-portfolio",
+        website: "",
         itunes: "",
         playStore: ""
       },
