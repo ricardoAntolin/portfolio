@@ -1,7 +1,8 @@
 import * as React from "react";
 
 import "./landing.scss";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-scroll';
+import ReactGA from 'react-ga';
 
 interface IAnimated {
   currentClass: string;
@@ -25,6 +26,13 @@ export interface IUserDetails {
   lastName: string;
   title: string;
 }
+
+const onHireClickEvent = () => {
+  ReactGA.event({
+    category: 'User',
+    action: `Clicked Hire on landing`
+  })
+};
 
 class Landing extends React.Component<IProps, IState> {
   constructor(props: any) {
@@ -75,6 +83,7 @@ class Landing extends React.Component<IProps, IState> {
           <Link
             href="#"
             to="contact"
+            onClick={onHireClickEvent}
             className={`hire-me-button ${hireMeButton &&
               hireMeButton.currentClass}`}
             spy={true}

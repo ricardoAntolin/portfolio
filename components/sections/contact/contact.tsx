@@ -2,14 +2,22 @@ import * as React from "react";
 
 import "./contact.scss";
 import SocialIcon, { ISocialIcon } from "../../shared/social/social";
+import ReactGA from 'react-ga';
 
 interface IProps {
   socialIconList: ISocialIcon[];
 }
 
+const onSendClickEvent = () => {
+  ReactGA.event({
+    category: 'User',
+    action: `Message sent clicked`
+  })
+};
+
 const Contact: React.StatelessComponent<IProps> = ({socialIconList}) => {
   return (
-    <section className="section section-theme" id="contact">
+    <section className="section section-theme">
       <h2>Contact</h2>
 
       <div className="contact-container">
@@ -25,7 +33,7 @@ const Contact: React.StatelessComponent<IProps> = ({socialIconList}) => {
             <input type="hidden" name="_subject" value="Contact request from personal website"/>
             <input type="email" name="_replyto" placeholder="Your email" /> 
             <textarea name="message" placeholder="Your message" />
-            <button type="submit">Send</button>
+            <button type="submit" onClick={onSendClickEvent}>Send</button>
           </form>
         </div>
       </div>

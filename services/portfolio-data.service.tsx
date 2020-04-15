@@ -187,8 +187,8 @@ export default class PortfolioDataService {
   ];
 
   public static readonly skillList: SkillEnum[] = Array.from(skillMap.entries())
-    .filter(([key, value]) => value.showAsDefault !== false)
-    .map(([key, value]) => key);
+    .filter(([_, value]) => value.showAsDefault !== false)
+    .map(([key, _]) => key);
 
   public static readonly socialIconList: ISocialIcon[] = [
     {

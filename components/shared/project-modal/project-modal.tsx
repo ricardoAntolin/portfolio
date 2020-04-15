@@ -4,6 +4,7 @@ import "./project-modal.scss";
 import { IProject, IUrl } from "../project/project";
 import Skill from "../skill/skill";
 import { SkillEnum } from "../../../constants";
+import ReactGA from 'react-ga';
 
 interface IProps {
   project: IProject;
@@ -77,6 +78,11 @@ class ProjectModal extends React.Component<IProps> {
       },
       modalExitEvent
     } = this.props;
+
+    ReactGA.event({
+      category: 'User',
+      action: `${this.props.project.name} was viewed`
+    })
 
     return (
       <div className="project-modal-container" onClick={modalExitEvent}>

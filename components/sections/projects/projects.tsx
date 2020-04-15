@@ -3,6 +3,7 @@ import * as React from "react";
 import "./projects.scss";
 import Project, { IProject } from "../../shared/project/project";
 import ProjectModal from "../../shared/project-modal/project-modal";
+import ReactGA from 'react-ga';
 
 interface IState {
   selectedProject?: IProject;
@@ -20,8 +21,13 @@ class Projects extends React.Component<IProps, IState> {
   }
 
   public handleProjectClick = (projectId: number) => {
+    let project = this.props.projectList.find(x => x.id === projectId)
+    ReactGA.event({
+      category: 'User',
+      action: `Clicked on project ${project.name}`
+    })
     this.setState({
-      selectedProject: this.props.projectList.find(x => x.id === projectId)
+      selectedProject: project
     });
   };
 
