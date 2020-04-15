@@ -30,8 +30,8 @@ const Contact: React.StatelessComponent<IProps> = ({socialIconList}) => {
         <div className="form-container">
           <h2>Send me a message</h2>
           <form method="POST" className="form" action="https://formspree.io/hello@ricardoantolin.dev">
-            <input type="hidden" name="_subject" value="Contact request from personal website"/>
-            <input type="email" name="_replyto" placeholder="Your email" /> 
+            <input type="hidden" name="_subject" value="Contact request from personal website" required/>
+            <input type="email" name="_replyto" placeholder="Your email" required/> 
             <textarea name="message" placeholder="Your message" />
             <button type="submit" onClick={onSendClickEvent}>Send</button>
           </form>
