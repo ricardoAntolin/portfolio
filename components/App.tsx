@@ -10,11 +10,23 @@ import Contact from "./sections/contact/contact";
 import Footer from "./sections/footer/footer";
 import PortfolioDataService from "../services/portfolio-data.service";
 import ReactGA from 'react-ga';
+import { Element, Events, scrollSpy } from 'react-scroll'
+
 
 ReactGA.initialize('UA-139875082-1');
-ReactGA.pageview("/#");
+
 
 class App extends React.Component {
+
+  public componentDidMount() {
+    Events.scrollEvent.register('end', function(to, element) {
+      console.log(to);
+      console.log(element);
+      ReactGA.pageview(`/${to}`);
+    });
+
+    scrollSpy.update();
+  }
 
   public render() {
     return (
@@ -24,7 +36,7 @@ class App extends React.Component {
         <Projects projectList={PortfolioDataService.projectList} />
         <Experience experienceList={PortfolioDataService.experienceList} />
         <Skills skillList={PortfolioDataService.skillList} />
-        <Contact socialIconList={PortfolioDataService.socialIconList} />
+        <Element name="contact"><Contact socialIconList={PortfolioDataService.socialIconList} /></Element>
         <Footer />
       </div>
     );
