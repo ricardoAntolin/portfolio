@@ -21,16 +21,6 @@ export default class PortfolioDataService {
 
   public static readonly experienceList: IInfoCard[] = [
     {
-      logo: "wunder.png",
-      headings: {
-        primary: "Wunder",
-        secondary: "Lead Mobile engineer",
-        tertiary: "February 2018 - Present"
-      },
-      description:
-        "Leading the creation of an awesome mobile app, that wants to make best version of its users"
-    },
-    {
       logo: "cabify.png",
       headings: {
         primary: "Cabify",
@@ -39,6 +29,16 @@ export default class PortfolioDataService {
       },
       description:
         "Mobile engineer at MaaS spanish company, helping to assure best possible experiencience for users"
+    },
+    {
+      logo: "wunder.png",
+      headings: {
+        primary: "Wunder",
+        secondary: "Lead Mobile engineer",
+        tertiary: "February 2018 - January 2020"
+      },
+      description:
+        "Leading the creation of an awesome mobile app, that wants to make best version of its users"
     },
     {
       logo: "square1.png",
