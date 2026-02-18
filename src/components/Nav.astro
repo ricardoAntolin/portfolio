@@ -1,0 +1,72 @@
+---
+const links = [
+  { label: "What I Do", href: "#whatido" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-[#2a2a2a]/60 bg-[#1a1a1a]/90 backdrop-blur-md" id="main-nav">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <a href="#" class="font-heading text-lg font-bold accent-text">RA</a>
+
+    <button
+      id="menu-toggle"
+      class="text-[#888] hover:text-white md:hidden"
+      aria-label="Toggle menu"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <ul class="hidden items-center gap-8 md:flex" id="nav-links">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-sm text-[#888] transition-colors hover:text-white"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="hidden border-t border-[#2a2a2a] md:hidden" id="mobile-menu">
+    <ul class="flex flex-col gap-1 px-6 py-4">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="mobile-link block rounded-lg px-3 py-2 text-sm text-[#888] transition-colors hover:bg-[#242424] hover:text-white"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggle?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  document.querySelectorAll(".mobile-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
+</script>

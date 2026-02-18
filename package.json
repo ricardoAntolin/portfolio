@@ -1,29 +1,24 @@
 {
-  "name": "with-typescript",
-  "version": "0.1.0",
+  "name": "ricardo-antolin-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "next build && next export",
-    "type-check": "tsc"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
-    "next": "^9.3.5",
-    "node-sass": "^4.12.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^2.7.0",
-    "react-scroll": "^1.7.16",
-    "@zeit/next-typescript": "^1.1.1"
+    "astro": "^5.0.0",
+    "@astrojs/react": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/next": "^9.0.0",
-    "@types/node": "^13.11.1",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "typescript": "^3.8.3"
-  },
-  "license": "ISC"
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  }
 }

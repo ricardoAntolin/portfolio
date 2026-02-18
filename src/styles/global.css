@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+/* ── Accent text ── */
+.accent-text {
+  color: #e8735a;
+}
+
+/* ── Cards ── */
+.card {
+  background: rgba(36, 36, 36, 0.85);
+  border: 1px solid rgba(51, 51, 51, 0.8);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(232, 115, 90, 0.25);
+}
+
+.card-interactive:hover {
+  border-color: rgba(232, 115, 90, 0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > .reveal-item {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-stagger.visible > .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.visible > .reveal-item:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.visible > .reveal-item:nth-child(2) { transition-delay: 0.06s; }
+.reveal-stagger.visible > .reveal-item:nth-child(3) { transition-delay: 0.12s; }
+.reveal-stagger.visible > .reveal-item:nth-child(4) { transition-delay: 0.18s; }
+.reveal-stagger.visible > .reveal-item:nth-child(5) { transition-delay: 0.24s; }
+.reveal-stagger.visible > .reveal-item:nth-child(6) { transition-delay: 0.30s; }
+.reveal-stagger.visible > .reveal-item:nth-child(7) { transition-delay: 0.36s; }
+.reveal-stagger.visible > .reveal-item:nth-child(8) { transition-delay: 0.42s; }
+
+/* ── Section divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 100%
+  );
+}
+
+/* ── Timeline ── */
+.timeline-line {
+  background-color: #333;
+}
+
+/* ── Skill icons ── */
+.skill-icon {
+  color: #999;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  color: #e8735a;
+  transform: scale(1.1);
+}
+
+/* ── Scroll indicator ── */
+@keyframes float-down {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 0.8; }
+}
+
+.scroll-indicator {
+  animation: float-down 2.5s ease-in-out infinite;
+}
+
+/* ── Noise texture ── */
+.noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
