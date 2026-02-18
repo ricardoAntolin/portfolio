@@ -54,7 +54,7 @@ export const experience: Experience[] = [
     role: "Software Engineer",
     period: "May 2025 — Present",
     description:
-      "Building and maintaining the technical infrastructure for pet health insurance — app backend, prepaid card system, and engagement platforms.",
+      "Helping pet parents give their pets the best healthcare possible. Building the systems that connect pet families with the care they need.",
   },
   {
     company: "Cabify",
@@ -68,7 +68,7 @@ export const experience: Experience[] = [
     role: "Software Engineer — Logistics",
     period: "Jul 2021 — Jan 2023",
     description:
-      "Created a new delivery service from scratch using the ride-hailing platform. Tech stack: Go and Elixir.",
+      "Created a new delivery service from scratch using the ride-hailing platform.",
   },
   {
     company: "Cabify",
@@ -156,16 +156,11 @@ export const skills: SkillCategory[] = [
 export const projects: Project[] = [
   {
     name: "Barkibu",
-    description:
-      "Pet health insurance platform — app backend, prepaid card system for vet payments, and engagement tools. Ruby on Rails, Spring Kotlin, Python, and Flutter.",
+    description: 
+      "Making pet healthcare accessible and affordable. A full-stack insurance platform — from the app in your pocket to the payment at the vet.",
     tags: ["Ruby on Rails", "Kotlin", "Python", "Flutter"],
   },
-  {
-    name: "Cabify Logistics",
-    description:
-      "Built a new delivery service from scratch on top of Cabify's ride-hailing platform. From architecture to production.",
-    tags: ["Go", "Elixir", "Android"],
-  },
+  {name: "Cabify Logistics", description: "Built a new delivery service from scratch on top of Cabify's ride-hailing platform. From architecture to production.", tags: ["Go", "Elixir", "Android"]},
   {
     name: "Cabify Rider",
     description:
@@ -183,7 +178,6 @@ export const projects: Project[] = [
     description:
       "Route management app for ambulance drivers handling non-urgent medical transportation in Valencia.",
     tags: ["Android", "Kotlin", "Java"],
-    url: "https://www.tsayuda.com",
   },
   {
     name: "Nike Storebook",
@@ -196,19 +190,6 @@ export const projects: Project[] = [
     description:
       "Worked on mobile and web apps for Banc Sabadell and TSB, including AngularJS + Java microservices.",
     tags: ["iOS", "Android", "AngularJS", "Java"],
-  },
-];
-
-export const education: Education[] = [
-  {
-    institution: "IES Pere Maria Orts i Bosch",
-    degree: "Desarrollo de Aplicaciones Multiplataforma",
-    period: "2013 — 2015",
-  },
-  {
-    institution: "Universidad de Burgos",
-    degree: "Ingeniería Técnica Industrial — Electrónica",
-    period: "1999 — 2001",
   },
 ];
 
