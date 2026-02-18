@@ -1,0 +1,101 @@
+---
+import { projects } from "../data/resume";
+---
+
+<section id="projects" class="px-6 py-28">
+  <div class="mx-auto max-w-3xl">
+    <div class="reveal flex items-center gap-4 mb-14">
+      <h2 class="font-heading text-3xl font-bold accent-text">Projects</h2>
+      <div class="section-divider flex-1"></div>
+    </div>
+
+    <!-- Featured project -->
+    {projects.length > 0 && (
+      <div class="reveal mb-8">
+        <div class="card card-interactive relative overflow-hidden rounded-2xl">
+          <!-- Decorative bg image -->
+          <div class="absolute inset-0">
+            <img src="/images/project-bg-1.png" alt="" class="h-full w-full object-cover opacity-15" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#242424] via-[#242424]/95 to-[#242424]/80"></div>
+          </div>
+
+          <div class="relative p-8 md:p-10">
+            <span class="mb-3 inline-block text-[10px] font-medium tracking-widest text-[#666] uppercase">
+              Current Project
+            </span>
+            <h3 class="font-heading text-2xl font-bold text-white">
+              {projects[0].name}
+            </h3>
+            <p class="mt-3 max-w-lg text-base leading-relaxed text-[#999]">
+              {projects[0].description}
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              {projects[0].tags.map((tag) => (
+                <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-[#999]">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            {projects[0].url && (
+              <a
+                href={projects[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-5 inline-flex items-center gap-1.5 text-sm text-[#e8735a] transition-colors hover:text-[#f08d78]"
+              >
+                Visit site
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- Project grid -->
+    <div class="grid gap-5 sm:grid-cols-2">
+      {
+        projects.slice(1).map((project, i) => (
+          <div class="reveal card card-interactive relative overflow-hidden rounded-2xl">
+            {/* Alternating decorative backgrounds */}
+            <div class="absolute inset-0">
+              <img
+                src={`/images/project-bg-${(i % 2) + 2}.png`}
+                alt=""
+                class="h-full w-full object-cover opacity-10"
+              />
+              <div class="absolute inset-0 bg-[#242424]/90"></div>
+            </div>
+
+            <div class="relative p-6">
+              <h3 class="font-heading text-base font-bold text-white">
+                {project.name}
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-[#888]">
+                {project.description}
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span class="rounded-full bg-white/5 px-2.5 py-1 text-xs text-[#888]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-4 inline-flex items-center gap-1.5 text-sm text-[#e8735a] transition-colors hover:text-[#f08d78]"
+                >
+                  Visit site
+                  <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                </a>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+import { personalInfo, socialLinks } from "../data/resume";
+import AnimatedRoles from "./AnimatedRoles";
+---
+
+<section
+  id="hero"
+  class="relative flex min-h-screen items-center justify-center overflow-hidden"
+>
+  <!-- Hero background image -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/hero-bg.png"
+      alt=""
+      class="h-full w-full object-cover opacity-30"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/60 via-[#1a1a1a]/80 to-[#1a1a1a]"></div>
+  </div>
+
+  <div class="relative z-10 mx-auto w-full max-w-3xl px-6 text-center">
+    <p class="mb-4 text-sm font-medium tracking-wider text-[#666] uppercase">
+      Hello, I'm
+    </p>
+    <h1 class="font-heading text-5xl font-bold leading-[1.1] text-white md:text-7xl lg:text-8xl">
+      {personalInfo.firstName}{" "}
+      <span class="accent-text">{personalInfo.lastName}</span>
+    </h1>
+    <p class="mt-5 font-heading text-xl text-[#999] md:text-2xl">
+      <AnimatedRoles client:load />
+    </p>
+    <p class="mx-auto mt-5 max-w-lg text-base leading-relaxed text-[#666]">
+      {personalInfo.tagline}
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <a
+        href={`mailto:${personalInfo.email}`}
+        class="card card-interactive flex items-center gap-2 rounded-full px-6 py-3 text-sm text-[#ccc] transition-colors hover:text-white"
+      >
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+        </svg>
+        {personalInfo.email}
+      </a>
+      {
+        socialLinks.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card card-interactive flex items-center gap-2 rounded-full px-5 py-3 text-sm text-[#999] transition-colors hover:text-white"
+          >
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d={link.icon} />
+            </svg>
+            {link.name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2">
+    <div class="flex flex-col items-center gap-2">
+      <span class="text-[10px] font-medium tracking-widest text-[#555] uppercase">Scroll</span>
+      <svg class="h-4 w-4 text-[#555]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+</section>

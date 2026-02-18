@@ -1,0 +1,22 @@
+---
+import { about } from "../data/resume";
+---
+
+<section id="about" class="relative px-6 py-28">
+  <div class="mx-auto max-w-3xl">
+    <div class="reveal flex items-center gap-4 mb-10">
+      <h2 class="font-heading text-3xl font-bold accent-text">About</h2>
+      <div class="section-divider flex-1"></div>
+    </div>
+
+    <div class="reveal card rounded-2xl p-8 md:p-10">
+      <div class="space-y-5">
+        {
+          about.map((paragraph) => (
+            <p class="text-lg leading-relaxed text-[#bbb]">{paragraph}</p>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
